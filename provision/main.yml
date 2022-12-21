@@ -1,0 +1,26 @@
+- hosts: 127.0.0.1
+  connection: local
+
+  tasks:
+    - name: Get the opensport-ng code
+      ansible.builtin.git:
+        repo: https://github.com/tsebastiani/openspot-ng.git
+        dest: ./workdir
+      tags:
+        - always
+
+    - name: Spin environment
+      ansible.builtin.include_tasks: up.yml
+      args:
+        apply:
+          tags: up
+      tags:
+        - up
+
+    - name: Tear down environment
+      ansible.builtin.include_tasks: down.yml
+      args:
+        apply:
+          tags: down
+      tags:
+        - down
