@@ -1,0 +1,8 @@
+---
+collections:
+  - name: kubernetes.core
+    version: 2.3.2
+    type: galaxy
+  - name: community.kubernetes
+    version: 1.1.1
+    type: galaxy
