@@ -2,7 +2,7 @@
   connection: local
 
   tasks:
-    - name: Get the opensport-ng code
+    - name: Get the openspot-ng code
       ansible.builtin.git:
         repo: https://github.com/tsebastiani/openspot-ng.git
         dest: ./workdir
