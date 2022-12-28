@@ -49,3 +49,4 @@
     create_namespace: true
     host: "{{ cluster_url }}:{{ cluster_port }}"
     api_key: "{{ k8s_auth_results.k8s_auth.api_key }}"
+    validate_certs: false
