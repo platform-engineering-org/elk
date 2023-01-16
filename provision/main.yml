@@ -5,7 +5,7 @@
     - name: Get the crc-cloud code
       ansible.builtin.git:
         repo: https://github.com/crc-org/crc-cloud.git
-        dest: ./crc_cloud
+        dest: ./crc_cloud_repo
       tags:
         - always
 
