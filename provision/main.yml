@@ -2,10 +2,10 @@
   connection: local
 
   tasks:
-    - name: Get the openspot-ng code
+    - name: Get the crc-cloud code
       ansible.builtin.git:
-        repo: https://github.com/tsebastiani/openspot-ng.git
-        dest: ./workdir
+        repo: https://github.com/crc-org/crc-cloud.git
+        dest: ./crc_cloud
       tags:
         - always
 

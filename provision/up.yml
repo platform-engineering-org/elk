@@ -1,14 +1,14 @@
 ---
 - name: Spin Openshift local
   ansible.builtin.shell:
-    cmd: ./openspot-ng.sh -C -p ~/Downloads/pull-secret.txt
-    chdir: ./workdir
-  register: openspot_up_results
+    cmd: ./crc-cloud.sh -C -p ~/Downloads/pull-secret.txt
+    chdir: ./crc_cloud
+  register: crc_up_results
 
 - name: Grab cluster info
   ansible.builtin.shell:
     cmd: cat workdir/latest/cluster_infos.json
-    chdir: ./workdir
+    chdir: ./crc_cloud
   register: cluster_info_results
 
 - name: Cluster info in json format
