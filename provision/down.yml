@@ -1,5 +1,5 @@
 ---
 - name: Tear down Openshift local
   ansible.builtin.shell:
-    cmd: ./openspot-ng.sh -T
-    chdir: ./workdir
+    cmd: ./crc-cloud.sh -T
+    chdir: ./crc_cloud_repo
