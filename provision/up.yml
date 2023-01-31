@@ -50,3 +50,14 @@
     host: "{{ cluster_url }}:{{ cluster_port }}"
     api_key: "{{ k8s_auth_results.k8s_auth.api_key }}"
     validate_certs: false
+
+# - name: Install Kibana
+#   ansible.builtin.shell:
+#     cmd: "CLUSTER_URL={{ cluster_url }} CLUSTER_PORT={{ cluster_port }}
+#       API_KEY={{ k8s_auth_results.k8s_auth.api_key }} ./kibana.sh"
+
+# - name: Expose kibana
+#   ansible.builtin.shell:
+#     cmd: oc expose svc/kibana-service
+    # host: "{{ cluster_url }}:{{ cluster_port }}"
+    # api_key: "{{ k8s_auth_results.k8s_auth.api_key }}"
