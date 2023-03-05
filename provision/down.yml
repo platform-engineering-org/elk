@@ -1,5 +1,4 @@
 ---
 - name: Tear down Openshift local
-  ansible.builtin.shell:
-    cmd: ./crc-cloud.sh -T
-    chdir: ./crc_cloud_repo
+  ansible.builtin.command: ./crc-cloud.sh -T
+  changed_when: false
